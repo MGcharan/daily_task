@@ -1,0 +1,92 @@
+Write a blog on Difference between HTTP1.1 vs HTTP2
+
+HTTP stands for hypertext transfer protocol & it is used in client-server communication. By using HTTP user sends the request to the server & the server sends the response to the user. 
+There are several stages of development of HTTP but we will focus mainly on 
+HTTP/1.1 which was created in 1997
+ new one is HTTP/2 which was created in 2015 .
+
+HTTP is based on the Client/Server model. Client/Server model can be explained as two computers, Client (receiver of service) and Server (provider of service) that are communicating via requests and responses
+
+A simple and abstract example would be a restaurant guest and a waiter. The guest (Client) asks (sends request) waiter (Server) for a meal, then the waiter gets the meal from the restaurant chef (your application logic) and brings the meal to the guest.
+
+HTTP/1.1:
+
+The first usable version of HTTP was created in 1997. Because it went through several stages of development, this first version of HTTP was called HTTP/1.1. This version is still in use on the web.
+
+HTTP/2:
+
+In 2015, a new version of HTTP called HTTP/2 was created. HTTP/2 solves several problems that the creators of HTTP/1.1 did not anticipate. In particular, HTTP/2 is much faster and more efficient than HTTP/1.1. One of the ways in which HTTP/2 is faster is in how it prioritizes content during the loading process.
+
+
+
+HTTP/1.1
+HTTP/2
+It works on the textual format.
+It works on the binary protocol.
+There is head of line blocking that blocks all the requests behind it until it doesn’t get its all resources.
+It allows multiplexing so one TCP connection is required for multiple requests.
+It uses requests resource Inlining for use getting multiple pages
+It uses PUSH frame by server that collects all multiple pages 
+It compresses data by itself.
+It uses HPACK for data compression.
+
+
+
+
+HTTP/2 improved on HTTP/1.1 in a number of ways:
+Binary protocols – Binary protocols consume less bandwidth, are more efficiently parsed and are less error-prone than the textual protocols used by HTTP/1.1. Additionally, they can better handle elements such as whitespace, capitalization and line endings.
+Multiplexing – HTTP/2 is multiplexed, i.e., it can initiate multiple requests in parallel over a single TCP connection. As a result, web pages containing several elements are delivered over one TCP connection. These capabilities solve the head-of-line blocking problem in HTTP/1.1, in which a packet at the front of the line blocks others from being transmitted.
+Header compression – HTTP/2 uses header compression to reduce the overhead caused by TCP’s slow-start mechanism.
+
+
+
+Server push – HTTP/2 servers push likely-to-be-used resources into a browser’s cache, even before they’re requested. This allows browsers to display content without additional request cycles.
+Increased security – Web browsers only support HTTP/2 via encrypted connections, increasing user and application security.
+
+
+
+
+
+
+ 2.Write a blog about objects and its internal representation in Javascript
+
+Objects, in JavaScript, is it’s most important data-type and forms the building blocks for modern JavaScript
+ These objects are quite different from JavaScript’s primitive data-types(Number, String, Boolean, null, undefined and symbol) in the sense that while these primitive data-types all store a single value each (depending on their types).
+Objects are more complex and each object may contain any combination of these primitive data-types as well as reference data-types.
+An object, is a reference data type. Variables that are assigned a reference value are given a reference or a pointer to that value. That reference or pointer points to the location in memory where the object is stored. The variables don’t actually store the value.
+objects in JavaScript may be defined as an unordered collection of related data, of primitive or reference types, in the form of “key: value” pairs. These keys can be variables or functions and are called properties and methods, respectively, in the context of an object.
+
+
+
+
+
+Creating Objects in JavaScript:
+By object literal
+By creating instance of Object directly (using new keyword
+The syntax of creating object using object literal is given below:
+
+Example:
+
+
+Object  Method:
+An object method is an object property containing a function definition.
+objectName.property        // Car.Make
+
+
+           //or
+
+
+objectName["property”]    // Car["Make"]
+
+
+          //or
+
+
+
+
+objectName[expression]   // x = "Make"; Car[x]
+
+
+
+
+
