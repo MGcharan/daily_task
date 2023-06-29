@@ -1,0 +1,17 @@
+function compare(){
+let obj1={name:"person1",age:'20'}
+let obj2={age:'20',name:'person1'}
+if(Object.keys(obj1).length !==Object.keys(obj2).length)
+{
+  return false;
+}
+for(let keys in obj1){
+if(!obj2.hasOwnProperty(keys)||obj2[keys]!==obj1[keys])
+{
+  return false;
+}
+}
+ return true;
+}
+let result=compare()
+console.log(result)
